@@ -4,24 +4,22 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">С</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">СРДО</span>
-          </div>
+          {/* Logo */}
+          <a href="/" className="flex items-center gap-3">
+            <span className="text-2xl font-extrabold tracking-tight" style={{ color: '#E84E53' }}>СРДО</span>
+            <span className="hidden sm:block text-sm leading-tight" style={{ color: '#8F8F8F' }}>
+              Сервис разрешительной<br />документации
+            </span>
+          </a>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="/uslugi" className="text-gray-600 hover:text-blue-600 font-medium transition">Услуги</a>
-            <a href="/tr-ts" className="text-gray-600 hover:text-blue-600 font-medium transition">ТР ТС</a>
-            <a href="/tn-ved" className="text-gray-600 hover:text-blue-600 font-medium transition">ТН ВЭД</a>
-            <a href="/organy" className="text-gray-600 hover:text-blue-600 font-medium transition">Органы</a>
-            <a href="/kontakty" className="text-gray-600 hover:text-blue-600 font-medium transition">Контакты</a>
+            <a href="/uslugi" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Услуги</a>
+            <a href="/tr-ts" className="text-gray-600 hover:text-[#E84E53] font-medium transition">ТР ТС</a>
+            <a href="/tn-ved" className="text-gray-600 hover:text-[#E84E53] font-medium transition">ТН ВЭД</a>
+            <a href="/organy" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Органы</a>
+            <a href="/kontakty" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Контакты</a>
           </nav>
-          <a href="tel:88000000000" className="hidden md:flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            Позвонить
+          <a href="/zayavka" className="hidden md:flex items-center gap-2 text-white px-5 py-2.5 rounded-lg font-semibold transition" style={{ backgroundColor: '#3A5AC9' }}>
+            Оставить заявку
           </a>
         </div>
       </header>
@@ -56,7 +54,8 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/zayavka"
-                className="group bg-white text-blue-900 px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-50 transition-all shadow-lg shadow-blue-900/30 flex items-center justify-center gap-2"
+                className="group bg-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2"
+                style={{ color: '#E84E53' }}
               >
                 Получить консультацию
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-indigo-700 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#3A5AC9' }}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -217,14 +216,15 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-6">
               Нужна консультация специалиста?
             </h2>
-            <p className="text-xl text-blue-100 mb-10">
+            <p className="text-xl opacity-90 mb-10">
               Оставьте заявку и получите бесплатный расчёт стоимости
               сертификации вашей продукции за 30 минут
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/zayavka"
-                className="bg-white text-blue-700 px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-50 transition shadow-lg"
+                className="bg-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-gray-100 transition shadow-lg"
+                style={{ color: '#E84E53' }}
               >
                 Оставить заявку
               </a>
@@ -248,14 +248,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">С</span>
-                </div>
-                <span className="text-xl font-bold">СРДО</span>
+                <span className="text-2xl font-extrabold" style={{ color: '#E84E53' }}>СРДО</span>
+                <span className="text-sm leading-tight text-slate-400">
+                  Сервис разрешительной<br />документации
+                </span>
               </div>
-              <p className="text-slate-400 mb-4">
-                Сервис Разрешительной<br />Документации Онлайн
-              </p>
               <p className="text-slate-500 text-sm">
                 ООО «Бизнес Среда»<br />
                 ИНН: 0000000000
