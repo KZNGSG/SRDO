@@ -1,0 +1,31 @@
+{
+  "name": "srdo",
+  "version": "1.0.0",
+  "description": "СРДО - Сервис Разрешительной Документации Онлайн",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "сертификация",
+    "ТР ТС",
+    "декларация",
+    "ЕАЭС"
+  ],
+  "author": "ООО Бизнес Среда",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "autoprefixer": "^10.4.23",
+    "next": "^16.1.1",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
+}
