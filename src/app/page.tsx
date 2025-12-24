@@ -11,193 +11,350 @@ export default function Home() {
               Сервис разрешительной<br />документации
             </span>
           </a>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="/uslugi" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Услуги</a>
-            <a href="/tr-ts" className="text-gray-600 hover:text-[#E84E53] font-medium transition">ТР ТС</a>
-            <a href="/tn-ved" className="text-gray-600 hover:text-[#E84E53] font-medium transition">ТН ВЭД</a>
-            <a href="/organy" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Органы</a>
-            <a href="/kontakty" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Контакты</a>
+          <nav className="hidden lg:flex items-center gap-6">
+            <a href="/servisy" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Сервисы</a>
+            <a href="/katalogi" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Каталоги</a>
+            <a href="/dlya-biznesa" className="text-gray-600 hover:text-[#E84E53] font-medium transition">Для бизнеса</a>
+            <a href="/o-servise" className="text-gray-600 hover:text-[#E84E53] font-medium transition">О сервисе</a>
           </nav>
-          <a href="/zayavka" className="hidden md:flex items-center gap-2 text-white px-5 py-2.5 rounded-lg font-semibold transition" style={{ backgroundColor: '#3A5AC9' }}>
-            Оставить заявку
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="/login" className="hidden md:block text-gray-600 hover:text-[#E84E53] font-medium transition">Войти</a>
+            <a href="/register" className="text-white px-5 py-2.5 rounded-lg font-semibold transition" style={{ backgroundColor: '#3A5AC9' }}>
+              Регистрация
+            </a>
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-400 rounded-full blur-3xl"></div>
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: '#E84E53' }}></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: '#3A5AC9' }}></div>
         </div>
 
-        <div className="container mx-auto px-6 py-24 relative z-10">
+        <div className="container mx-auto px-6 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span className="text-sm text-blue-100">Работаем по всей России</span>
+              <span className="text-sm text-gray-300">Платформа для бизнеса по всей России</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Сертификация продукции
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                быстро и надёжно
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Все сервисы разрешительной
+              <span className="block" style={{ color: '#E84E53' }}>
+                документации
               </span>
             </h1>
 
-            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Оформляем сертификаты и декларации ТР ТС, СГР, отказные письма.
-              Более 10 лет на рынке. 15 000+ довольных клиентов.
+            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+              Единая платформа: подбор ТН ВЭД, проверка маркировки, сертификация,
+              СГР, техническая документация и 20+ других сервисов
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/zayavka"
-                className="group bg-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2"
-                style={{ color: '#E84E53' }}
-              >
-                Получить консультацию
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              <a
-                href="/kalkulyator"
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition-all flex items-center justify-center gap-2"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-                Рассчитать стоимость
-              </a>
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Что вам нужно? Например: сертификат на одежду, код ТН ВЭД..."
+                  className="w-full px-6 py-4 pr-14 rounded-2xl text-gray-900 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20"
+                />
+                <button className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-xl text-white" style={{ backgroundColor: '#E84E53' }}>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap items-center justify-center gap-8 mt-14 pt-10 border-t border-white/10">
-              <div className="text-center">
-                <div className="text-3xl font-bold">10+</div>
-                <div className="text-sm text-blue-200">лет на рынке</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">15 000+</div>
-                <div className="text-sm text-blue-200">клиентов</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">50+</div>
-                <div className="text-sm text-blue-200">регламентов</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">24/7</div>
-                <div className="text-sm text-blue-200">поддержка</div>
-              </div>
+            {/* Quick Links */}
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <span className="text-gray-500">Популярное:</span>
+              <a href="/podbor-tn-ved" className="text-gray-300 hover:text-white underline underline-offset-2">Подбор ТН ВЭД</a>
+              <a href="/sertifikat-tr-ts" className="text-gray-300 hover:text-white underline underline-offset-2">Сертификат ТР ТС</a>
+              <a href="/chestniy-znak" className="text-gray-300 hover:text-white underline underline-offset-2">Честный знак</a>
+              <a href="/nuzhna-li-sertifikaciya" className="text-gray-300 hover:text-white underline underline-offset-2">Нужна ли сертификация?</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-24 bg-gray-50">
+      {/* Popular Services */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Всё для сертификации в одном месте
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Популярные сервисы
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Уникальные инструменты и базы данных для работы с разрешительной документацией
+            <p className="text-xl text-gray-600">
+              Бесплатные онлайн-инструменты для работы с документацией
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">50+ Технических Регламентов</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Полный каталог ТР ТС и ТР ЕАЭС с подробным описанием требований, схем сертификации и перечнем продукции
-              </p>
-              <a href="/tr-ts" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 group-hover:gap-2 transition-all">
-                Перейти в каталог
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">1 400+ Органов сертификации</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Актуальная база аккредитованных органов и лабораторий из реестра Росаккредитации с контактами
-              </p>
-              <a href="/organy" className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 group-hover:gap-2 transition-all">
-                Найти орган
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Service 1 */}
+            <a href="/podbor-tn-ved" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#3A5AC9] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#3A5AC9' }}>
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">16 000+ кодов ТН ВЭД</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Умный помощник подбора кода ТН ВЭД для таможенного оформления с привязкой к техническим регламентам
-              </p>
-              <a href="/tn-ved" className="inline-flex items-center text-violet-600 font-semibold hover:text-violet-700 group-hover:gap-2 transition-all">
-                Подобрать код
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3A5AC9]">Подбор кода ТН ВЭД</h3>
+              <p className="text-gray-600 text-sm mb-3">Найдите правильный код для вашего товара из 16 000+ позиций</p>
+              <span className="text-sm font-medium" style={{ color: '#3A5AC9' }}>Бесплатно →</span>
+            </a>
+
+            {/* Service 2 */}
+            <a href="/nuzhna-li-sertifikaciya" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#E84E53] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#E84E53' }}>
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#E84E53]">Нужна ли сертификация?</h3>
+              <p className="text-gray-600 text-sm mb-3">Определите какие документы нужны для вашей продукции</p>
+              <span className="text-sm font-medium" style={{ color: '#E84E53' }}>Проверить →</span>
+            </a>
+
+            {/* Service 3 */}
+            <a href="/chestniy-znak" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#3A5AC9] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#1D1D1B' }}>
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3A5AC9]">Проверка Честный знак</h3>
+              <p className="text-gray-600 text-sm mb-3">Проверьте нужна ли маркировка для вашего товара</p>
+              <span className="text-sm font-medium" style={{ color: '#3A5AC9' }}>Проверить →</span>
+            </a>
+
+            {/* Service 4 */}
+            <a href="/kalkulyator" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#E84E53] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#E84E53' }}>
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#E84E53]">Калькулятор стоимости</h3>
+              <p className="text-gray-600 text-sm mb-3">Рассчитайте стоимость сертификации онлайн</p>
+              <span className="text-sm font-medium" style={{ color: '#E84E53' }}>Рассчитать →</span>
+            </a>
+
+            {/* Service 5 */}
+            <a href="/nuzhno-li-sgr" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#3A5AC9] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#3A5AC9' }}>
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3A5AC9]">Нужно ли СГР?</h3>
+              <p className="text-gray-600 text-sm mb-3">Проверьте нужна ли гос. регистрация продукции</p>
+              <span className="text-sm font-medium" style={{ color: '#3A5AC9' }}>Проверить →</span>
+            </a>
+
+            {/* Service 6 */}
+            <a href="/proverka-sertifikata" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#E84E53] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#E84E53' }}>
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#E84E53]">Проверка сертификата</h3>
+              <p className="text-gray-600 text-sm mb-3">Проверьте подлинность сертификата в реестре</p>
+              <span className="text-sm font-medium" style={{ color: '#E84E53' }}>Проверить →</span>
+            </a>
+
+            {/* Service 7 */}
+            <a href="/podbor-tr-ts" className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#3A5AC9] hover:shadow-xl transition-all">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: '#3A5AC9' }}>
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#3A5AC9]">Подбор ТР ТС</h3>
+              <p className="text-gray-600 text-sm mb-3">Найдите применимые техрегламенты для товара</p>
+              <span className="text-sm font-medium" style={{ color: '#3A5AC9' }}>Подобрать →</span>
+            </a>
+
+            {/* Service 8 - All Services */}
+            <a href="/servisy" className="group bg-gradient-to-br from-gray-100 to-gray-50 p-6 rounded-2xl border-2 border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all flex flex-col justify-center items-center text-center">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 bg-gray-300">
+                <svg className="w-7 h-7 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-700 mb-2">Все сервисы</h3>
+              <p className="text-gray-500 text-sm">20+ инструментов</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Catalogs & Databases */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Каталоги и базы данных
+            </h2>
+            <p className="text-xl text-gray-600">
+              Актуальная информация из официальных источников
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Catalog 1 */}
+            <a href="/tr-ts" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-8 text-white hover:shadow-2xl transition-all">
+              <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div className="text-5xl font-bold mb-2" style={{ color: '#E84E53' }}>50+</div>
+              <h3 className="text-2xl font-bold mb-3">Технических регламентов</h3>
+              <p className="text-gray-400 mb-4">Полный каталог ТР ТС и ТР ЕАЭС с описанием требований и схем сертификации</p>
+              <span className="inline-flex items-center text-sm font-medium group-hover:gap-2 transition-all" style={{ color: '#E84E53' }}>
+                Открыть каталог
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </span>
+            </a>
+
+            {/* Catalog 2 */}
+            <a href="/tn-ved" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-8 text-white hover:shadow-2xl transition-all">
+              <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <div className="text-5xl font-bold mb-2" style={{ color: '#3A5AC9' }}>16 000+</div>
+              <h3 className="text-2xl font-bold mb-3">Кодов ТН ВЭД</h3>
+              <p className="text-gray-400 mb-4">Справочник кодов товарной номенклатуры с привязкой к регламентам</p>
+              <span className="inline-flex items-center text-sm font-medium group-hover:gap-2 transition-all" style={{ color: '#3A5AC9' }}>
+                Открыть справочник
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+
+            {/* Catalog 3 */}
+            <a href="/organy-sertifikacii" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-8 text-white hover:shadow-2xl transition-all">
+              <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div className="text-5xl font-bold mb-2" style={{ color: '#E84E53' }}>1 400+</div>
+              <h3 className="text-2xl font-bold mb-3">Органов сертификации</h3>
+              <p className="text-gray-400 mb-4">База аккредитованных органов и лабораторий из реестра Росаккредитации</p>
+              <span className="inline-flex items-center text-sm font-medium group-hover:gap-2 transition-all" style={{ color: '#E84E53' }}>
+                Найти орган
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* For Business - Personal Cabinets */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Личные кабинеты для бизнеса
+            </h2>
+            <p className="text-xl text-gray-600">
+              Специализированные решения для разных участников рынка
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-blue-100">
+                <svg className="w-6 h-6" style={{ color: '#3A5AC9' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Для импортёров</h3>
+              <p className="text-gray-600 text-sm mb-4">Управление сертификацией импортных товаров</p>
+              <span className="text-sm text-gray-400">Скоро</span>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-red-100">
+                <svg className="w-6 h-6" style={{ color: '#E84E53' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Для производителей</h3>
+              <p className="text-gray-600 text-sm mb-4">Полный цикл сертификации продукции</p>
+              <span className="text-sm text-gray-400">Скоро</span>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-green-100">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Для органов сертификации</h3>
+              <p className="text-gray-600 text-sm mb-4">CRM для работы с заявками</p>
+              <span className="text-sm text-gray-400">Скоро</span>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-purple-100">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Для лабораторий</h3>
+              <p className="text-gray-600 text-sm mb-4">Управление испытаниями и протоколами</p>
+              <span className="text-sm text-gray-400">Скоро</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-24 bg-white">
+      {/* Industries */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Наши услуги
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Сферы деятельности
             </h2>
             <p className="text-xl text-gray-600">
-              Полный спектр услуг по сертификации и декларированию
+              Выберите вашу отрасль для персонализированных решений
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { title: 'Сертификат ТР ТС', desc: 'Обязательная сертификация по техническим регламентам', icon: '📜', color: 'blue' },
-              { title: 'Декларация ТР ТС', desc: 'Декларирование соответствия требованиям ТР ТС', icon: '📋', color: 'emerald' },
-              { title: 'СГР', desc: 'Свидетельство о государственной регистрации', icon: '🏛️', color: 'violet' },
-              { title: 'Отказное письмо', desc: 'Письмо о непопадании под сертификацию', icon: '✉️', color: 'amber' },
-            ].map((service, i) => (
+              { name: 'Пищевая продукция', icon: '🍎', href: '/sfera/pishchevaya-produkciya' },
+              { name: 'Одежда и обувь', icon: '👕', href: '/sfera/odezhda-obuv' },
+              { name: 'Детские товары', icon: '🧸', href: '/sfera/detskie-tovary' },
+              { name: 'Электроника', icon: '📱', href: '/sfera/elektronika' },
+              { name: 'Мед. изделия', icon: '🏥', href: '/sfera/medicinskie-izdeliya' },
+              { name: 'Косметика', icon: '💄', href: '/sfera/kosmetika' },
+              { name: 'Строительство', icon: '🏗️', href: '/sfera/stroitelnye-materialy' },
+              { name: 'Машиностроение', icon: '⚙️', href: '/sfera/mashinostroenie' },
+              { name: 'Химия', icon: '🧪', href: '/sfera/himicheskaya-produkciya' },
+              { name: 'Мебель', icon: '🪑', href: '/sfera/mebel' },
+              { name: 'Транспорт', icon: '🚗', href: '/sfera/transport' },
+              { name: 'Все сферы', icon: '📋', href: '/sfery' },
+            ].map((industry, i) => (
               <a
                 key={i}
-                href={`/${service.title.toLowerCase().replace(/ /g, '-')}`}
-                className="group p-6 rounded-2xl border-2 border-gray-100 hover:border-blue-200 hover:bg-blue-50/50 transition-all"
+                href={industry.href}
+                className="flex flex-col items-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-all text-center group"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{service.desc}</p>
+                <span className="text-3xl mb-2">{industry.icon}</span>
+                <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">{industry.name}</span>
               </a>
             ))}
           </div>
@@ -205,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#3A5AC9' }}>
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#3A5AC9' }}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -213,12 +370,12 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-4xl font-bold mb-6">
-              Нужна консультация специалиста?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Не нашли нужный сервис?
             </h2>
             <p className="text-xl opacity-90 mb-10">
-              Оставьте заявку и получите бесплатный расчёт стоимости
-              сертификации вашей продукции за 30 минут
+              Оставьте заявку и мы поможем решить вашу задачу
+              в сфере разрешительной документации
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -229,13 +386,10 @@ export default function Home() {
                 Оставить заявку
               </a>
               <a
-                href="tel:88000000000"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition flex items-center justify-center gap-2"
+                href="/kontakty"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                8 (800) 000-00-00
+                Связаться с нами
               </a>
             </div>
           </div>
@@ -245,28 +399,30 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+            <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-2xl font-extrabold" style={{ color: '#E84E53' }}>СРДО</span>
                 <span className="text-sm leading-tight text-slate-400">
                   Сервис разрешительной<br />документации
                 </span>
               </div>
+              <p className="text-slate-400 mb-4 max-w-sm">
+                Единая платформа сервисов для работы с разрешительной документацией в России
+              </p>
               <p className="text-slate-500 text-sm">
-                ООО «Бизнес Среда»<br />
-                ИНН: 0000000000
+                ООО «Бизнес Среда»
               </p>
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-6">Услуги</h4>
+              <h4 className="font-bold text-lg mb-6">Сервисы</h4>
               <ul className="space-y-3">
-                <li><a href="/sertifikat-tr-ts" className="text-slate-400 hover:text-white transition">Сертификаты ТР ТС</a></li>
-                <li><a href="/deklaraciya-tr-ts" className="text-slate-400 hover:text-white transition">Декларации ТР ТС</a></li>
-                <li><a href="/sgr" className="text-slate-400 hover:text-white transition">СГР</a></li>
-                <li><a href="/otkaznoe-pismo" className="text-slate-400 hover:text-white transition">Отказные письма</a></li>
-                <li><a href="/protokoly-ispytaniy" className="text-slate-400 hover:text-white transition">Протоколы испытаний</a></li>
+                <li><a href="/podbor-tn-ved" className="text-slate-400 hover:text-white transition">Подбор ТН ВЭД</a></li>
+                <li><a href="/nuzhna-li-sertifikaciya" className="text-slate-400 hover:text-white transition">Нужна ли сертификация?</a></li>
+                <li><a href="/chestniy-znak" className="text-slate-400 hover:text-white transition">Честный знак</a></li>
+                <li><a href="/kalkulyator" className="text-slate-400 hover:text-white transition">Калькулятор</a></li>
+                <li><a href="/servisy" className="text-slate-400 hover:text-white transition">Все сервисы</a></li>
               </ul>
             </div>
 
@@ -276,21 +432,13 @@ export default function Home() {
                 <li><a href="/tr-ts" className="text-slate-400 hover:text-white transition">Техрегламенты ТР ТС</a></li>
                 <li><a href="/tn-ved" className="text-slate-400 hover:text-white transition">Коды ТН ВЭД</a></li>
                 <li><a href="/organy-sertifikacii" className="text-slate-400 hover:text-white transition">Органы сертификации</a></li>
-                <li><a href="/laboratorii" className="text-slate-400 hover:text-white transition">Испытательные лаборатории</a></li>
+                <li><a href="/laboratorii" className="text-slate-400 hover:text-white transition">Лаборатории</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-lg mb-6">Контакты</h4>
               <ul className="space-y-4">
-                <li>
-                  <a href="tel:88000000000" className="flex items-center gap-3 text-slate-400 hover:text-white transition">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    8 (800) 000-00-00
-                  </a>
-                </li>
                 <li>
                   <a href="mailto:info@srdo.ru" className="flex items-center gap-3 text-slate-400 hover:text-white transition">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
